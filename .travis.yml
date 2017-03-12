@@ -6,7 +6,7 @@ cache:
   directories:
     - node_modules
 before_install:
-  - sudo add-apt-repository ppa:wine/wine-builds
+  - sudo add-apt-repository ppa:wine/wine-builds -y
   - sudo apt-get update
   - sudo apt-get install wine
 install:
