@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>P4ng!</title>
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function(){
+        var props = require('../../init.js')
+    })
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/p4ng-style.css">
+</head>
+
+<body>
+    <h1>P4ng!</h1>
+
+
+    <div id ="formsContainer" class="open">
+
+        <form method ="POST" id ="createAccountForm">
+            <fieldset>
+                <legend>Create account</legend>
+                <label for="usernameCreateAccountForm">Username :</label><br>
+                <input type="text" name="username" id = "usernameCreateAccountForm"><br>
+                <label for="emailCreateAccountForm">Email :</label><br>
+                <input type="text" name="email" id = "emailCreateAccountForm"><br>
+                <label for="pwdCreateAccountForm">Password :</label><br>
+                <input type="password" name="pwd" id = "pwdCreateAccountForm"><br>
+                <label for="verifyPwdCreateAccountForm">Confirm password :</label><br>
+                <input type="password" name="confirmPwd" id = "verifyPwdCreateAccountForm"><br><br>
+                <p class ="alert" id ="alertCreateAccountForm"> </p><br>
+                <input type="submit" value="Submit" id ="submitCreateAccountForm">
+            </fieldset>
+        </form>
+
+
+        <form method ="POST" id ="authenticateForm">
+            <fieldset>
+                <legend>Authenticate</legend>
+                <label for="emailAuthenticateForm">Email :</label><br>
+                <input type="text" name="email" id = "emailAuthenticateForm"><br>
+                <label for="pwdAccountForm">Password :</label><br>
+                <input type="password" name="pwd" id = "pwdAuthenticateForm"><br>
+                <p class ="alert" id ="alertAuthenticateForm"> </p><br>
+                <input type="submit" value="Connect" id ="submitAuthenticateForm">
+            </fieldset>
+        </form>
+
+        <form method ="POST" id ="LogInAsGuestForm">
+            <fieldset>
+                <legend>Log in as guest</legend>
+                <label for="usernameLogInAsGuestForm">Username :</label><br>
+                <input type="text" name="username" id = "usernameLogInAsGuestForm"><br>
+                <p class ="alert" id ="alertLoginAsGuestForm"> </p><br>
+                <input type="submit" value="Connect" id ="submitLogInAsGuestForm">
+            </fieldset>
+        </form>
+
+    </div>
+
+
+
+
+
+    <div id="lobbyContainer" class="closed">
+        <table id="lobbyPanel">
+            <thead>
+                <tr>
+                    <th>PLAYERS</th>
+                    <th>ROOMS</th>
+                </tr>
+            </thead>
+            <tr>
+                <!-- PLAYERS -->
+                <td id="players">
+                    <div id="74" class="localPlayer">
+                        <ul class="playerInfo">
+                            <li>
+                                <p>Your name: </p>
+                                <p id="localPlayerName"></p>
+                            </li>
+                            <li><p>Score: </p><p></p></li>
+                            <li><p>Rank: </p><p></p></li>
+                        </ul>
+                    </div>
+                    <button id="refreshPlayers">refresh</button>
+                    <ul id="remotePlayersList">
+
+
+                        <!-- PLAYAS GET IN HERE -->
+
+
+                    </ul>
+                </td>
+                <!-- GAMES -->
+                <td>
+                    <div id="newGame">
+                        <p>Room name:</p>
+                        <input type="text" size="9" id="newGameName">
+                        <button id="createGame">create</button>
+                    </div>
+                    <button id="refreshRooms">refresh</button>
+                    <table id="games">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>in</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="gameList">
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="gameContainer" class="closed">
+        <div id="gamePanel">
+            <h3 id="roomName"></h3>
+            <div id="roomPlayers" style="margin: auto; width: 500px;">
+                <div class="playerRow">
+                    <span class="roomPlayerName"></span><img class="controlIcon" src="" style="visibility:hidden;"><span class="controlDetails"></span><span>&nbsp;-&nbsp;</span></div>
+                <div class="playerRow">
+                    <span class="roomPlayerName"></span><img class="controlIcon" src="" style="visibility:hidden;"><span class="controlDetails"></span><span>&nbsp;-&nbsp;</span></div>
+                <div class="playerRow">
+                    <span class="roomPlayerName"></span><img class="controlIcon" src="" style="visibility:hidden;"><span class="controlDetails"></span><span>&nbsp;-&nbsp;</span></div>
+                <div class="playerRow">
+                    <span class="roomPlayerName"></span><img class="controlIcon" src="" style="visibility:hidden;"><span class="controlDetails"></span>
+                </div>
+            </div>
+            <canvas id="gameArea" width="500" height="500"></canvas>
+            <div id="controls">
+                <input id="playerName" type="text"> <br>
+                <button id="startButton" class="control">Start!</button>
+                <button id="addPlayerButton" class="control">+</button>
+                <button id="stopButton" class="control" onclick="">Stop.</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
