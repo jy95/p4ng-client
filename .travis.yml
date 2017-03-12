@@ -5,6 +5,10 @@ node_js:
 cache:
   directories:
     - node_modules
+before_install:
+  - sudo add-apt-repository ppa:wine/wine-builds
+  - sudo apt-get update
+  - sudo apt-get install wine
 install:
   - npm install
   - npm install electron-packager -g
