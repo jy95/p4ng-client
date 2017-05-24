@@ -7,11 +7,14 @@
     "callsite": "^1.0.0",
     "electron": "^1.4.7",
     "shelljs": "^0.7.5",
-    "socket.io-client": "^1.6.0"
+    "socket.io-client": "^2.0.0",
+    "snyk": "^1.30.1"
   },
   "scripts": {
     "startClient": "electron src/app.js",
-    "packagerApp": "node scripts/packager-script.js"
+    "packagerApp": "node scripts/packager-script.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -30,5 +33,6 @@
   "bugs": {
     "url": "https://github.com/jy95/P4ng-client/issues"
   },
-  "homepage": "https://github.com/jy95/P4ng-client#readme"
+  "homepage": "https://github.com/jy95/P4ng-client#readme",
+  "snyk": true
 }
