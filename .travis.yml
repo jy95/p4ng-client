@@ -11,6 +11,9 @@ before_install:
   - sudo apt-get install wine
 install:
   - npm install
+  # https://electronjs.org/docs/tutorial/testing-on-headless-ci
+  - export DISPLAY=':99.0'
+  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
   - npm install electron-packager -g
   - npm run packagerApp
 notifications:
@@ -29,3 +32,4 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
+      - xvfb
