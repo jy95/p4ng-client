@@ -1,5 +1,7 @@
 # P4ng [![Build Status](https://img.shields.io/travis/jy95/P4ng.svg)](https://travis-ci.org/jy95/P4ng)  [![Coveralls branch](https://img.shields.io/coveralls/jy95/P4ng/master.svg)](https://coveralls.io/github/jy95/P4ng?branch=master) [![Dependency Status](https://img.shields.io/david/jy95/P4ng.svg)](https://david-dm.org/jy95/P4ng)  [![Dev Dependency Status](https://img.shields.io/david/dev/jy95/P4ng.svg)](https://david-dm.org/jy95/P4ng?type=dev) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jy95/P4ng-client.svg)](https://greenkeeper.io/)
+
 
 > P4ng is a 4 player off and online version of the classic pong game by Team JaEGT.
 
