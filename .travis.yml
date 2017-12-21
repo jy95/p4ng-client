@@ -23,6 +23,7 @@ notifications:
 branches:
   only:
   - master
+  - /^greenkeeper/.*$/
 env:
   global :
       - CXX=g++-4.8
