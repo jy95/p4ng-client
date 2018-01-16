@@ -6,7 +6,7 @@
   "dependencies": {
     "callsite": "^1.0.0",
     "electron": "^1.4.7",
-    "shelljs": "^0.7.5",
+    "shelljs": "^0.8.0",
     "socket.io-client": "^2.0.0",
     "snyk": "^1.30.1"
   },
