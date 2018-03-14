@@ -8,7 +8,7 @@
     "electron": "^1.4.7",
     "shelljs": "^0.8.0",
     "socket.io-client": "^2.0.0",
-    "snyk": "^1.69.9"
+    "snyk": "^1.70.1"
   },
   "scripts": {
     "startClient": "electron src/app.js",
