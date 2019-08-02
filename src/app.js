@@ -9,7 +9,10 @@ function createWindow(){
     win = new BrowserWindow({
         width: 700,
         height: 800,
-        icon: props.p4ngIcon
+        icon: props.p4ngIcon,
+        webPreferences: {
+            nodeIntegration: true
+        }
     })
     win.loadURL(url.format({
         pathname: props.p4ngIndex,

@@ -28,5 +28,9 @@
     },
     "p4ngIndex": "./client/view/html/index.html",
     "p4ngIcon": "./client/view/P4ng-logo.png",
-    "fps" : 60
+    "fps" : 60,
+    "socketProps": {
+        "url": "http://127.0.0.1",
+        "port": 8080
+    }
 }
