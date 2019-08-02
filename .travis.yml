@@ -5,15 +5,13 @@ cache:
   directories:
     - node_modules
 before_install:
-  - sudo add-apt-repository ppa:wine/wine-builds -y
   - sudo apt-get update
-  - sudo apt-get install wine
-install:
-  - npm install
   # https://electronjs.org/docs/tutorial/testing-on-headless-ci
   - export DISPLAY=':99.0'
   - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
   - npm install electron-packager -g
+install:
+  - npm install
   - npm run packagerApp
 notifications:
   slack:

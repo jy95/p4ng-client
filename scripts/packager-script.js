@@ -92,7 +92,7 @@ echo(" ");
 echo("Running electron-packager");
 
 // Run external tool synchronously
-if (exec('electron-packager . P4ng --platform=win32 --arch=x64').code !== 0) {
+if (exec('electron-packager . P4ng --platform=linux --arch=x64').code !== 0) {
     echo('Error: electron-packager failed');
     exit(1);
 }
